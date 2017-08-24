@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3" >
+        <form role="form" [formGroup]="addForm">
+            <div class="form-group">
+
+                  <div>
+
+                      <label for="naziv_knjige">Naziv knjige:</label>
+                      <input type="text" class="form-control" formControlName='naziv_knjige'>
+                  </div>
+                  <br>
+                  <div>
+
+                      <label for="autor">Autor:</label>
+                      <input type="text" class="form-control" formControlName='autor'>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="zanr">Zanr:</label>
+                    <select class="form-control" formControlName='zanr_id'>
+                        <option *ngFor="let zanr of zanrovi" [value]="zanr.ID">{{zanr.naziv_zanr}} </option>
+                    </select>
+                </div>
+                <br>
+                <div>
+
+                    <label for="opis">Opis knjige:</label>
+                    <input type="text" class="form-control" formControlName='opis'>
+                </div>
+                <br>
+                <div >
+                    <label for="cena">Cena knjige:</label>
+                    <input type="text" class="form-control" formControlName='cena'>
+                </div>
+            </div>
+            <button (click)="onAdd()" class="btn btn-primary">Dodaj knjigu<span class="glyphicon glyphicon-ok"></span></button>
+        </form>
+    </div>
+</div>

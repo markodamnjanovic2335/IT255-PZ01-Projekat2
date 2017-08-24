@@ -1,0 +1,1 @@
+{"version":3,"file":"obiblioteci.component.js","sourceRoot":"","sources":["obiblioteci.component.ts"],"names":[],"mappings":";;;;;;;AAAA,sCAAqD;AAWrD,IAAa,oBAAoB;IAAjC;IAEA,CAAC;IAAD,2BAAC;AAAD,CAAC,AAFD,IAEC;AAFY,oBAAoB;IANhC,gBAAS,CAAC;QACX,QAAQ,EAAE,aAAa;QACvB,WAAW,EAAE,kCAAkC;QAC/C,SAAS,EAAE,CAAC,yCAAyC,EAAC,mCAAmC,EAAC,uCAAuC,CAAC;KACjI,CAAC;GAEW,oBAAoB,CAEhC;AAFY,oDAAoB"}

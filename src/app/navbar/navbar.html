@@ -1,0 +1,30 @@
+<nav class= "navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigacija">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Online-knjige</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigacija">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/">Home</a></li>S
+                <li><a routerLink="/obiblioteci">O biblioteci</a></li>
+                <li *ngIf="isAuth == 'no' && isAuth2 == 'yes'"><a routerLink="/dodajknjigu">Dodaj Knjigu</a></li>
+                <li *ngIf="isAuth == 'yes' && isAuth2 == 'yes'"><a routerLink="/knjige">Knjige</a></li>
+                <li *ngIf="isAuth == 'yes' && isAuth2 == 'yes'"><a routerLink="/pricaonica">Pricaonica</a></li>
+                <li *ngIf="isAuth == 'no' && isAuth2 == 'yes'"><a routerLink="/test">Spisak Korisnika</a></li>
+                <li *ngIf="isAuth == 'no' && isAuth2 == 'yes'"><a routerLink="/narudzbine">Spisak Narudzbina</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="desno">
+              <li *ngIf="isAuth == 'no' && isAuth2 == 'no'"><a routerLink="/register">Register</a></li>
+                    <li *ngIf="isAuth == 'no' && isAuth2 == 'no'"><a routerLink="/login">Login</a></li>
+                    <li *ngIf="isAuth == 'yes' || isAuth2 == 'yes'" ><a (click)="onLogout()">Logout</a></li>
+              </ul>
+        </div>
+    </div>
+</nav>
